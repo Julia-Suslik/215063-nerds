@@ -10,71 +10,90 @@
   	<body>
     <header class="main-header">
         <div class="container clearfix">
-            <a class="logo" href="index.html"><img src="img/nerds-logo.png" width="150" height="100" alt="NЁRD'S"></a>   
+            <a class="logo" href="index.html"><img src="img/nerds-logo.png" alt="NЁRD'S" width="150" height="100"></a>
             <div class="main-menu">
                 <nav>
                     <ul>
-                        <li><a href="#">Студия</a></li>
+                        <li><a href="index.html">Студия</a></li>
                         <li><a href="#">Клиенты</a></li>
                         <li><a href="catalog.html">Магазин</a></li>
-                        <li><a href="#">Контакты</a></li>	
+                        <li><a href="#">Контакты</a></li>   
                     </ul>
                 </nav>
             </div>
 
-			<div class="basket-menu">
-                <a class="icon-basket" href="#">Корзина</a></div>
-			</div>
-
-            <h1 class="title">Магазин готовых шаблонов</h1>
+            <div class="basket-menu">
+                <a class="icon-basket" href="#">Корзина</a>
+            </div>
         </div>
+        
+        <h1 class="title">Магазин готовых шаблонов</h1>
+        
     </header>
 
-    <main class="container">
+    <main class="container clearfix">
         <div class="search-options">
             <form action="#" metod="POST">
-                <div class="price-range">
-                    <b>Стоимость:</b>
-                    <!-- я что-то не пойму, как сделать эту шкалу =( -->
-                    <div class="range"></div> 
-                    <div class="min-toggle"></div>
-                    <div class="max-toggle"></div>
-                </div>
+                <h3>Стоимость:</h3>
+                <div class="price">
+                    <div class="price-filter">
+                        <div class="range-controls">
+                            <div class="bar"></div>
+                            <div class="toggle min-toggle"></div>
+                            <div class="toggle max-toggle"></div>
+                        </div>
+                    </div>
                     
-                <div class="price-range">
-                    <lable for="min">от<input class="min-price" type="text" value="0" id="min"></lable>
-                    <lable class="max">до<input class="max-price" type="text" value="15 000" id="max"></lable>
-                </div>
+                    <div class="price-span">
+                        <lable for="min">от
+                            <input class="min-price" type="text" value="0" id="min">
+                        </lable>
+                        
+                        <lable class="max">до
+                            <input class="max-price" type="text" value="15 000" id="max">
+                        </lable>
+                    </div>
+                </div>    
 
-                <div class="grid">
-                    <b>Сетка:</b>
-                    <input type="radio" name="switch" id="radio1" checked><label for="radio1">Адаптивная</label>
-                    <input type="radio" name="switch" id="radio2"><label for="radio2">Фиксированная</label>
-                    <input type="radio" name="switch" id="radio3"><label for="radio3">Резиновая</label>
-                </div>
+                <h3>Сетка:</h3>
+                <input type="radio" name="switch" id="radio1" checked>
+                <label for="radio1">Адаптивная</label>
 
-                <div class="features">
-                    <b>Особенности:</b>
-                    <input type="checkbox" name="feature1" id="check1" checked><label for="check1">Слайдер</label><br>
-                    <input type="checkbox" name="feature2" id="check2"><label for="check2">Блок преимуществ</label><br>
-                    <input type="checkbox" name="feature3" id="check3" checked><label for="check3">Новости</label><br>
-                    <input type="checkbox" name="feature4" id="check4"><label for="check4">Галерея</label><br>
-                    <input type="checkbox" name="feature5" id="check5"><label for="check5">Корзина</label>
-                </div>
+                <input type="radio" name="switch" id="radio2">
+                <label for="radio2">Фиксированная</label>
+
+                <input type="radio" name="switch" id="radio3">
+                <label for="radio3">Резиновая</label>
+
+
+                <h3>Особенности:</h3>
+                <input type="checkbox" name="feature1" id="check1" checked>
+                <label for="check1">Слайдер</label><br>
+                
+                <input type="checkbox" name="feature2" id="check2">
+                <label for="check2">Блок преимуществ</label><br>
+                
+                <input type="checkbox" name="feature3" id="check3" checked>
+                <label for="check3">Новости</label><br>
+                
+                <input type="checkbox" name="feature4" id="check4">
+                <label for="check4">Галерея</label><br>
+                
+                <input type="checkbox" name="feature5" id="check5">
+                <label for="check5">Корзина</label>
                     
                 <button type="submit">Показать</button>
             </form>
         </div> 
 
-        <div class="sort">
-            <ul class="sort-menu">
-                <li>Сортировать:</li>
-                <li><a class="sort-menu-item" href="#">По цене</a></li>
-                <li><a class="sort-menu-item" href="#">По типу</a></li>
-                <li><a class="sort-menu-item" href="#">По названию</a></li>
-                <li><a class="sort-menu-icon-up" href="#"><img src="img/sort-down.png" alt="down" width="9" height="9"></a></li>
-                <li><a class="sort-menu-icon-down" href="#"><img src="img/sort-up.png" alt="up" width="9" height="9"></a></li> 
-            </ul>
+        <div class="sortind">
+            <b>Сортировать:</b>
+            <a class="sort-menu-item" href="#">По цене</a>
+            <a class="sort-menu-item" href="#">По типу</a>
+            <a class="sort-menu-item" href="#">По названию</a>
+            
+            <span class="sort-menu-icon-up" href="#"></span>
+            <span class="sort-menu-icon-down" href="#"></span>
         </div>
 
         <div class="card-product">
@@ -90,17 +109,15 @@
                 </div>
             </a>
         
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-pink.jpg" alt="Pink App" width="360" height="576"> 
-                </div>
+        <a class="card-product-item" href="#">
+            <img src="img/img-pink.jpg" alt="Pink App" width="360" height="576"> 
 
-                <div class="description">   
-                    <div class="description-title">Pink App</div>
-                    <div class="description-text">Продуктовый лендинг приложения для iOS и Android</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
+            <div class="description">   
+                <div class="description-title">Pink App</div>
+                <div class="description-text">Продуктовый лендинг приложения для iOS и Android</div>
+                <div class="description-btn">9 900 руб.</div>
+            </div>
+        </a>
 
             <a class="card-product-item" href="#">
                 <div>
@@ -159,37 +176,40 @@
         </ul>
     </main>
 
-    <footer class="main-footer">
-        <div class="map"></div> <!-- заготовка для карты -->
-        <div class="container"> 
-            <div class="contact"> 
-                <span class="contact-header">NЁRDS DESIGN STUDIO</span>
-                <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>  
-                <p>тел. +7 (812) 275-75-75 </p> 
-                <a class="btn-write-us" href="#">НАПИШИТЕ НАМ</a>       
-            </div>
+    <div class="map">
+        <div class="map-img" id="map"></div>
             
-            <div class="social-networks">
-                <ul class="social-networks-icon">
-                    <li><a href="#"><img scr="img/vk-icon.png" width="26" height="15"></a></li>
-                    <li><a href="#"><img scr="img/fb-icon.png" width="12" height="22"></a></li>
-                    <li><a href="#"><img scr="img/insta-icon.png" width="21" height="21"></a></li>
-                </ul>
-            </div>
-                
-            <div class="social-networks-text">
-                <h2 class="social-networks-text-header">Давайте дружить, это выгодно!</h2>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
-                
+        <div class="contact"> 
+           <span class="contact-header">NЁRDS DESIGN STUDIO</span>
+           <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>  
+           <p>тел. +7 (812) 275-75-75 </p> 
+               <a class="btn btn-write-us" href="#">Напишите нам</a>       
+       </div>
+    </div>
+
+    <footer class="main-footer">     
+        <div class="container clearfix">      
+           <div class="social-networks">
+                <div class="social-networks-left-column">
+                    <a class="social-btn social-btn-vk" href="#"</a>
+                    <a class="social-btn social-btn-fb" href="#"></a>
+                    <a class="social-btn social-btn-inst" href="#"></a>
+                </div>
+
+                <div class="social-networks-right-column">
+                    <p class="social-networks-header">Давайте дружить, это выгодно!</p>
+                    <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+                </div>    
+            </div>   
         </div>
     </footer>
 
-    <!-- модальное окно с формой отправки сообщения -->
+    <!-- модальное окно с формой отправки сообщения 
     <div class="write-us">
         <form class="write-us-form" action="#" method="POST">
-            <h2>Напишите нам</h2>
-            <div class="write-us-form-tip">
+            <h1>Напишите нам</h1>
+            <div class="write-us-form-tip clearfix">
+
                 <div class="write-us-form-field">
                     <label for="field-name">Ваше имя:</label>
                     <input type="text" name="name" id="field-name" placeholder="Представьтесь, пожалуйста" required>
@@ -206,7 +226,7 @@
                 <textarea name="text" id="text-letter" rows="4" placeholder="В свободной форме"></textarea>
             </div>
                 
-            <div class="write-us-form-btn">
+            <div class="write-us-form-btn clearfix">
                 <div class="write-us-form-field">
                     <button class="btn" type="submit">Отправить</button>
                 </div>
@@ -216,6 +236,7 @@
                 </div>
             </div> 
         </form> 
-    </div>
+    </div> -->
+
     </body>
 </html>

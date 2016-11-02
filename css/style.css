@@ -28,7 +28,6 @@ img {
 .container {
     width: 1160px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 
 .clearfix {
@@ -37,13 +36,15 @@ img {
     clear: both;
 }
 
-/* ==========================
-       Всё для header 
-   ========================== */
+/* ===============================================
+                    ГЛАВНАЯ СТРАНИЦА
+    ============================================== */
+
+/* Шапка */
 
 .main-header h1 {
     width: 650px;
-    min-height: 545px;
+    min-height: 300px;
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
@@ -59,22 +60,7 @@ img {
     margin-bottom: 80px;
 }
 
-.main-header .active {
-    position: relative;
-    background-color: none;
-    cursor: pointer;
-}
-
-.main-header .active::after {
-    position: absolute;
-    content: "";
-    width: auto;
-    height: 2px;
-    bottom: 0;
-    left: 5px;
-    right: 5px;
-    background-color: #fb565a;
-}
+/* Логотип */
 
 .logo {
     float: left;
@@ -83,6 +69,8 @@ img {
     margin-top: 27px;
     margin-bottom: 52px;
 }
+
+/* Меню */
 
 .main-menu {
     float: left;
@@ -128,6 +116,8 @@ img {
     margin-right: 0;
 }
 
+/* Корзина */
+
 .basket-menu {
     float: right;
     position: relative;
@@ -165,7 +155,7 @@ img {
     background-position: -6px -5px;
 }
 
-.basket-menu a:hover:before {
+.basket-menu a:hover {
     width: 15px;
     height: 15px;
     background-position: -6px -55px;
@@ -177,15 +167,15 @@ img {
 }
 
 .basket-menu a:hover:before {
-    width: 15px;
-    height: 15px;
-    background-position: -6px -55px;
+  width: 15px;
+  height: 15px;
+  background-position: -6px -55px;
 }
 
 .basket-menu a:active:before {
-    width: 15px;
-    height: 15px;
-    background-position: -6px -30px;
+  width: 15px;
+  height: 15px;
+  background-position: -6px -30px;
 }
 
 /* Слайды */
@@ -200,6 +190,16 @@ img {
 
 .slider input[type="radio"] {
     display: none;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+    z-index: 10;
 }
 
 .slider-controls label {
@@ -224,7 +224,6 @@ img {
     background-repeat: no-repeat;
     background-position: 100% 10px;
     -webkit-transition: left 0.3s ease;
-    transition: left 0.3s ease;
 }
 
 .slides {
@@ -236,22 +235,47 @@ img {
 .slide-text {
     width: 500px;
     padding: 30px 0;
-}
-
-.slide p {
     font-weight: 500;
     line-height: 22px;
     color: #283136;
 }
 
-.slider-controls {
-    position: absolute;
-    bottom: 95px;
-    left: 50%;
-    width: 200px;
-    margin-left: -100px;
-    text-align: center;
-    z-index: 10;
+.slide-header {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.slide:nth-child(1) {
+    background-image: url("../img/slider-1.jpg");
+}
+
+.slide:nth-child(2) {
+    background-image: url("../img/slider-2.jpg");
+}
+
+.slide:nth-child(3) {
+    background-image: url("../img/slider-3.jpg");
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 11px 40px;
+  background-color: #fb565a;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: blink;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  outline: none;
 }
 
 #btn-1:checked ~ .slides .slide:nth-child(1) {
@@ -310,14 +334,6 @@ img {
     left: 0;
 }
 
-.slide-header {
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 500;
-    margin: 0px;
-    padding: 0;
-}
-
 .slider-btn {
     box-sizing: border-box;
     width: 240px;
@@ -333,24 +349,7 @@ img {
     box-shadow: 0 2px 0 0 #9b2d30 inset;
 }
 
-.btn {
-    display: inline-block;
-    vertical-align: bottom;
-    padding: 11px 40px;
-    background-color: #fb565a;
-    color: #ffffff;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    border: none;
-    outline: none;
-}
-
-/* продукты */
+/* Продукты */
 
 .product-website,
 .product-application,
@@ -416,7 +415,7 @@ img {
     background-color: #d6ae2c;
 }
 
-/* серая линия */
+/* Серая линия */
 
 .overline {
     position: relative;
@@ -428,6 +427,7 @@ img {
 }
 
 /* О нас */
+/* верх */
 
 .about-us-top {
     width: 100%;
@@ -451,6 +451,7 @@ img {
     margin: 0px;
     padding: 0;
     color: #000000;
+    font-weight: bold;
 }
 
 .about-us-top-right {
@@ -558,5 +559,298 @@ h2 {
     opacity: 1;
 }
 
+/* Карта */
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 416px;
+  background: url("../img/map-marker.jpg") 50% 50% no-repeat;
+  margin-top: 85px;
+}
+
+.map-img {
+    width: 100%;
+    margin:0 auto;
+}
+
 /* Контакты */
+
+.contact {
+    position:absolute;
+    top:90px;
+    left:50%;
+    width:240px;
+    margin-left:-440px;
+    padding: 24px 20px;
+    background:#fff;    
+}
+
+.contact p {
+    color:#666666;
+    font-size:16px;
+    line-height:20px;
+    font-weight:300;
+    margin: 15px;
+}
+
+.contact span {
+    margin: 15px;
+    font-weight: bold;
+}
+
+.btn-write-us {
+    margin-top:10px;
+    width: 50%;
+    text-align:center;
+    background:#fb565a;
+    margin-left: 15px;
+}
+
+.btn-write-us:hover {
+    background:#d6494d;
+}
+
+.btn-write-us:active {
+    background:#b63538;
+    box-shadow: 0 2px 0 #9b2d30 inset;
+}
+
+/* Подвал */
+
+.social-networks {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.social-networks-left-column {
+    float: left;
+    width: 330px;
+    margin-left: 20px;
+}
+
+.social-networks-right-column {
+    float: right;
+    max-width: 550px;
+    margin-right: 20px;
+}
+
+.social-networks-header{
+    margin-bottom: 10px;
+}
+
+.sale {
+    color: #283136;
+}
+
+.social-btn {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    background: #e1e1e1;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.social-btn:hover {
+    background-color: #fb565a;
+}
+
+.social-btn:active {
+    box-shadow: inset 0 3px 0 0 #b63e42;
+    background-color: #d6494d;
+}
+
+.social-btn-vk::before {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-family: symbols-nerds;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    color: white;
+    background-image: url(../img/vk-icon.png);
+}
+
+.social-btn-fb::before {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-family: symbols-nerds;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    color: white;
+    background-image: url(../img/fb-icon.png);
+}
+
+.social-btn-inst::before {
+    position: absolute;
+    left: 17px;
+    top: 20px;
+    font-family: symbols-nerds;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    color: white;
+    background-image: url(../img/insta-icon.png);
+}
+
+.social-networks-header {
+    font-size: 36px;
+    line-height: 36px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* ===============================================
+                    СТРАНИЦА КАТАЛОГА
+    ============================================== */
+
+/* Шапка */
+
+.main-header h1 {
+  width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: none;
+  line-height: 1.5;
+  padding-top: 11px;
+  padding-bottom: 0px;
+  font-weight: normal;
+  font-weight: bold;
+}
+
+.search-options h3 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Сортировка */
+
+.search-options {
+  float: left;
+  width: 260px;
+  min-height: 730px;
+  margin-top: -7px;
+}
+
+/* Штуковина с ползунками */
+
+.price {
+  width: 240px;
+}
+
+.price-filter {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.price-filter .range-controls {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.price-filter .bar {
+  width: 70%;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.price-filter .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.price-filter .min-toggle {
+  left: 20px;
+}
+
+.price-filter .max-toggle {
+  left: 145px;
+}
+
+.pprice-span {
+  font-size: 0;
+}
+
+.price-span label {
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+}
+
+.max {
+  text-align: right;
+}
+
+.price-span input {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+
+
 

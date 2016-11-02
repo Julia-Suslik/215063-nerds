@@ -14,7 +14,7 @@
             <div class="main-menu">
                 <nav>
                     <ul>
-                        <li><a href="#">Студия</a></li>
+                        <li><a href="index.html">Студия</a></li>
                         <li><a href="#">Клиенты</a></li>
                         <li><a href="catalog.html">Магазин</a></li>
                         <li><a href="#">Контакты</a></li>	
@@ -42,21 +42,18 @@
 						<p class="slide-header">Долго, дорого, скрупулезно.</p>
 						<p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
                         <a class="btn slider-btn" href="#">Узнaть больше</a>
-                        <img src="img/slider-1.jpg" alt="Слайд-1" width="760" height="431">	
                     </div>
    
                     <div class="slide slide-text">
 						<p class="slide-header">Любим математику как никто другой</p>
 						<p>Никакого креатива, только математические формулы<br>для расчета идеальных пропорций.</p> 
 						<a class="btn slider-btn" href="#">Узнaть больше</a>
-                        <img src="img/slider-2.jpg" alt="Слайд-2" width="760" height="431">
                     </div>
 
                     <div class="slide slide-text">
 						<p class="slide-header">Только ночь, только хардкор.</p>
 						<p>Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается.</p>
                         <a class="btn slider-btn" href="#">Узнaть больше</a>
-                        <img src="img/slider-3.jpg" alt="Слайд-3" width="760" height="431">	
                     </div>
                 </div>
             </div>   
@@ -130,38 +127,41 @@
         </div>
     </main>    
 
-	<footer class="main-footer">
-        <div class="map"></div> <!-- заготовка для карты -->
-		<div class="container"> 
-	        <div class="contact"> 
-	            <span class="contact-header">NЁRDS DESIGN STUDIO</span>
-	            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>  
-	            <p>тел. +7 (812) 275-75-75 </p> 
-                <!-- здесь тоже 1-ая заглавная остальные строчные? -->
-	            <a class="btn-write-us" href="#">НАПИШИТЕ НАМ</a>       
-	        </div>
+	
+    <div class="map">
+        <div class="map-img" id="map"></div>
 	        
-	        <div class="social-networks">
-                <ul class="social-networks-icon">
-                    <li><a href="#"><img scr="img/vk-icon.png" width="26" height="15"></a></li>
-                    <li><a href="#"><img scr="img/fb-icon.png" width="12" height="22"></a></li>
-                    <li><a href="#"><img scr="img/insta-icon.png" width="21" height="21"></a></li>
-                </ul>
-            </div>
-                
-            <div class="social-networks-text">
-                <p class="social-networks-text-header">Давайте дружить, это выгодно!</p>
-                <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
-            </div>
-                
+        <div class="contact"> 
+	       <span class="contact-header">NЁRDS DESIGN STUDIO</span>
+	       <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>  
+	       <p>тел. +7 (812) 275-75-75 </p> 
+	       <a class="btn btn-write-us" href="#">Напишите нам</a>       
+	   </div>
+    </div>
+
+    <footer class="main-footer">     
+	    <div class="container clearfix">      
+	       <div class="social-networks">
+                <div class="social-networks-left-column">
+                    <a class="social-btn social-btn-vk" href="#"</a>
+                    <a class="social-btn social-btn-fb" href="#"></a>
+                    <a class="social-btn social-btn-inst" href="#"></a>
+                </div>
+
+                <div class="social-networks-right-column">
+                    <p class="social-networks-header">Давайте дружить, это выгодно!</p>
+                    <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+                </div>    
+            </div>   
         </div>
     </footer>
 
-	<!-- модальное окно с формой отправки сообщения -->
+	<!-- модальное окно с формой отправки сообщения 
 	<div class="write-us">
 		<form class="write-us-form" action="#" method="POST">
 			<h1>Напишите нам</h1>
-			<div class="write-us-form-tip">
+			<div class="write-us-form-tip clearfix">
+
 				<div class="write-us-form-field">
 	                <label for="field-name">Ваше имя:</label>
 	                <input type="text" name="name" id="field-name" placeholder="Представьтесь, пожалуйста" required>
@@ -178,7 +178,7 @@
     			<textarea name="text" id="text-letter" rows="4" placeholder="В свободной форме"></textarea>
     		</div>
                 
-			<div class="write-us-form-btn">
+			<div class="write-us-form-btn clearfix">
 				<div class="write-us-form-field">
 					<button class="btn" type="submit">Отправить</button>
 				</div>
@@ -188,6 +188,7 @@
 				</div>
 			</div> 
         </form>	
-    </div>
+    </div> -->
+
 	</body>
 </html>
