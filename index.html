@@ -4,7 +4,8 @@
     	<meta charset="utf-8">
     	<title>NЁRDS DESIGN STUDIO</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">        
   	</head>
 
   	<body>
@@ -22,9 +23,9 @@
                 </nav>
             </div>
 
-			<div class="basket-menu">
-				<a class="icon-basket" href="#">Корзина</a>
-			</div>
+    			<div class="basket-menu">
+    				<a class="icon-basket" href="#">Корзина</a>
+    			</div>
                             
             <div class="slider container">
                 <input type="radio" value="rd" name="switch" id="btn-1" checked>
@@ -60,31 +61,29 @@
         </div>
     </header>
 
-    <main class="container clearfix">  
-        <div class="product">  
-            <div class="product-website">
-					<img src="img/illustration-1.jpg" alt="Веб-сайты" width="300" height="146">
-                    <h2 class="product-header">Веб-сайты</h2>
-                    <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                    <a class="btn btn-red" href="#">Заказать</a>
-                </div>
-                    
-                <div class="product-application">
-					<img src="img/illustration-2.jpg" alt="Приложения" width="300" height="146">
-                    <h2 class="product-header">Приложения</h2>
-                    <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a class="btn btn-green" href="#">Заказать</a>
-                </div>
-                    
-                <div class="product-presentation">
-					<img src="img/illustration-3.jpg" alt="Презентации" width="300" height="146">
-                    <h2 class="product-header">Презентации</h2>
-                    <p>Вы даже не подозреваете насколько вы изумительны!</p>
-                    <a class="btn btn-yellow" href="#">Заказать</a>
-                </div>   
+    <main class="container">  
+        <div class="products">  
+            <div class="product">
+				<img src="img/illustration-1.jpg" alt="Веб-сайты" width="300" height="146">
+                <h2 class="product-header">Веб-сайты</h2>
+                <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                <a class="btn btn-red" href="#">Заказать</a>
             </div>
-        
-        <hr class="overline">
+                    
+             <div class="product">
+				<img src="img/illustration-2.jpg" alt="Приложения" width="300" height="146">
+                <h2 class="product-header">Приложения</h2>
+                <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+                <a class="btn btn-green" href="#">Заказать</a>
+            </div>
+                    
+            <div class="product">
+				<img src="img/illustration-3.jpg" alt="Презентации" width="300" height="146">
+                <h2 class="product-header">Презентации</h2>
+                <p>Вы даже не подозреваете насколько вы изумительны!</p>
+                <a class="btn btn-yellow" href="#">Заказать</a>
+            </div>   
+        </div>
 
 		<div class="about-us">
             <div class="about-us-top clearfix">   
@@ -119,7 +118,7 @@
         	</div>
         </div>
 
-        <div class="clients clearfix">
+        <div class="clients">
             <a class="clients-item" href="https://htmlacademy.ru"><img src="img/logo-1.png" alt="htmlacademy.ru" width="199" height="68"></a>
             <a class="clients-item" href="#"><img src="img/logo-2.png" alt="barbershop-borodinski.ru" width="209" height="90"></a>
             <a class="clients-item" href="#"><img src="img/logo-3.png" alt="pink.ru" width="175" height="52"></a>
@@ -140,8 +139,8 @@
     </div>
 
     <footer class="main-footer">     
-	    <div class="container clearfix">      
-	       <div class="social-networks">
+	    <div class="container">      
+	       <div class="social-networks clearfix">
                 <div class="social-networks-left-column">
                     <a class="social-btn social-btn-vk" href="#"</a>
                     <a class="social-btn social-btn-fb" href="#"></a>
@@ -156,39 +155,38 @@
         </div>
     </footer>
 
-	<!-- модальное окно с формой отправки сообщения 
 	<div class="write-us">
-		<form class="write-us-form" action="#" method="POST">
-			<h1>Напишите нам</h1>
-			<div class="write-us-form-tip clearfix">
+        <form class="write-us-form" action="#" method="POST">
+            <h1>Напишите нам</h1>
+            <div class="write-us-form clearfix">
 
-				<div class="write-us-form-field">
-	                <label for="field-name">Ваше имя:</label>
-	                <input type="text" name="name" id="field-name" placeholder="Представьтесь, пожалуйста" required>
-	            </div>
-	                
-	            <div class="write-us-form-field">
-	                <label for="field-email">Ваш e-mail:</label>
-	    			<input type="email" name="email" id="field-email" placeholder="Для отправки ответа" required>
-	            </div>
+                <div class="write-us-left-column">
+                    <label for="field-name">Ваше имя:</label>
+                    <input type="text" name="login" id="field-name" placeholder="Представьтесь, пожалуйста" required>
+                </div>
+                    
+                <div class="write-us-right-column">
+                    <label for="field-email">Ваш e-mail:</label>
+                    <input type="email" name="email" id="field-email" placeholder="Для отправки ответа" required>
+                </div>
             </div>    
             
             <div class="write-us-form-field">    
-            	<label for="text-letter">Текст письма:</label>
-    			<textarea name="text" id="text-letter" rows="4" placeholder="В свободной форме"></textarea>
-    		</div>
+                <label for="text-letter">Текст письма:</label>
+                <textarea name="text" id="text-letter" rows="4" placeholder="В свободной форме"></textarea>
+            </div>
                 
-			<div class="write-us-form-btn clearfix">
-				<div class="write-us-form-field">
-					<button class="btn" type="submit">Отправить</button>
-				</div>
-				
-				<div class="write-us-form-field">
-					<a class="cancel-btn" href="#">Отмена</a>
-				</div>
-			</div> 
-        </form>	
-    </div> -->
-
+            <div class="write-us-form-btn clearfix">
+                <div class="write-us-form-field">
+                    <button class="btn write-us-btn" type="submit">Отправить</button>
+                </div>
+                
+                <div class="write-us-form-field">
+                    <a class="cancel-btn" href="#"></a>
+                </div>
+            </div>
+        </form> 
+    </div> 
+    <script src="js/script.js"></script>
 	</body>
 </html>

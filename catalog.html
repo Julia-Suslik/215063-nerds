@@ -4,6 +4,7 @@
     	<meta charset="utf-8">
     	<title>NЁRDS DESIGN STUDIO</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
   	</head>
 
@@ -32,148 +33,152 @@
     </header>
 
     <main class="container clearfix">
-        <div class="search-options">
-            <form action="#" metod="POST">
-                <h3>Стоимость:</h3>
-                <div class="price">
-                    <div class="price-filter">
-                        <div class="range-controls">
-                            <div class="bar"></div>
-                            <div class="toggle min-toggle"></div>
-                            <div class="toggle max-toggle"></div>
+        <div class="catalog-left">
+            <div class="search-options">
+                <form action="#" metod="POST">
+                    <h3>Стоимость:</h3>
+                    <div class="price">
+                        <div class="price-filter">
+                            <div class="range-controls">
+                                <div class="bar"></div>
+                                <div class="toggle min-toggle"></div>
+                                <div class="toggle max-toggle"></div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="price-span">
-                        <lable for="min">от
-                            <input class="min-price" type="text" value="0" id="min">
-                        </lable>
                         
-                        <lable class="max">до
-                            <input class="max-price" type="text" value="15 000" id="max">
-                        </lable>
-                    </div>
-                </div>    
+                        <div class="price-span">
+                            <lable for="min">от
+                                <input class="min-price" type="text" value="0" id="min">
+                            </lable>
+                            
+                            <lable for="max">до
+                                <input class="max-price" type="text" value="15 000" id="max">
+                            </lable>
+                        </div>
+                    </div>    
 
-                <h3>Сетка:</h3>
-                <input type="radio" name="switch" id="radio1" checked>
-                <label for="radio1">Адаптивная</label>
+                    <h3>Сетка:</h3>
+                    <input type="radio" name="switch" id="radio1" checked>
+                    <label for="radio1">Адаптивная</label>
 
-                <input type="radio" name="switch" id="radio2">
-                <label for="radio2">Фиксированная</label>
+                    <input type="radio" name="switch" id="radio2">
+                    <label for="radio2">Фиксированная</label>
 
-                <input type="radio" name="switch" id="radio3">
-                <label for="radio3">Резиновая</label>
+                    <input type="radio" name="switch" id="radio3">
+                    <label for="radio3">Резиновая</label>
 
 
-                <h3>Особенности:</h3>
-                <input type="checkbox" name="feature1" id="check1" checked>
-                <label for="check1">Слайдер</label><br>
-                
-                <input type="checkbox" name="feature2" id="check2">
-                <label for="check2">Блок преимуществ</label><br>
-                
-                <input type="checkbox" name="feature3" id="check3" checked>
-                <label for="check3">Новости</label><br>
-                
-                <input type="checkbox" name="feature4" id="check4">
-                <label for="check4">Галерея</label><br>
-                
-                <input type="checkbox" name="feature5" id="check5">
-                <label for="check5">Корзина</label>
+                    <h3>Особенности:</h3>
+                    <input type="checkbox" name="feature1" id="check1" checked>
+                    <label for="check1">Слайдер</label><br>
                     
-                <button type="submit">Показать</button>
-            </form>
-        </div> 
-
-        <div class="sortind">
-            <b>Сортировать:</b>
-            <a class="sort-menu-item" href="#">По цене</a>
-            <a class="sort-menu-item" href="#">По типу</a>
-            <a class="sort-menu-item" href="#">По названию</a>
-            
-            <span class="sort-menu-icon-up" href="#"></span>
-            <span class="sort-menu-icon-down" href="#"></span>
+                    <input type="checkbox" name="feature2" id="check2">
+                    <label for="check2">Блок преимуществ</label><br>
+                    
+                    <input type="checkbox" name="feature3" id="check3" checked>
+                    <label for="check3">Новости</label><br>
+                    
+                    <input type="checkbox" name="feature4" id="check4">
+                    <label for="check4">Галерея</label><br>
+                    
+                    <input type="checkbox" name="feature5" id="check5">
+                    <label for="check5">Корзина</label>
+                        
+                    <button type="submit">Показать</button>
+                </form>
+            </div> 
         </div>
-
-        <div class="card-product">
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576"> 
-                </div>
-
-                <div class="description">   
-                    <div class="description-title">Sedona</div>
-                    <div class="description-text">Информационный сайт  для туристов</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
         
-        <a class="card-product-item" href="#">
-            <img src="img/img-pink.jpg" alt="Pink App" width="360" height="576"> 
-
-            <div class="description">   
-                <div class="description-title">Pink App</div>
-                <div class="description-text">Продуктовый лендинг приложения для iOS и Android</div>
-                <div class="description-btn">9 900 руб.</div>
+        <div class="catalog-right">
+            <div class="sorting">
+                <span class="sort-menu-title">Сортировать:</span>
+                <a class="sort-menu-item" href="#">По цене</a>
+                <a class="sort-menu-item" href="#">По типу</a>
+                <a class="sort-menu-item" href="#">По названию</a>
+                
+                <div class="sort-menu-up-down">
+                    <a class="sort-menu-icon-down btn-checked" href="#"></a>
+                    <a class="sort-menu-icon-up" href="#"></a>                    
+                </div>
             </div>
-        </a>
+      
+            <div class="card-product clearfix">
+                <a class="card-product-item" href="#">
+                    <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576"> 
 
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576"> 
-                </div>
+                    <div class="description">   
+                        <div class="description-title">Sedona</div>
+                        <div class="description-text">Информационный сайт  для туристов</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
+            
+                <a class="card-product-item" href="#">
+                    <img src="img/img-pink.jpg" alt="Pink App" width="360" height="576"> 
 
-                <div class="description">   
-                    <div class="description-title">Barbershop</div>
-                    <div class="description-text">Сайт салоны красоты. Для мужчин, да.</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
+                    <div class="description">   
+                        <div class="description-title">Pink App</div>
+                        <div class="description-text">Продуктовый лендинг приложения для iOS и Android</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
 
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-mishka.jpg" alt="MISHKA" width="360" height="576"> 
-                </div>
+                <a class="card-product-item" href="#">
+                    <div>
+                        <img src="img/img-barbershop.jpg" alt="Barbershop" width="360" height="576"> 
+                    </div>
 
-                <div class="description">   
-                    <div class="description-title">MISHKA</div>
-                    <div class="description-text">Интернет-магазин  вязаных игрушек</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
+                    <div class="description">   
+                        <div class="description-title">Barbershop</div>
+                        <div class="description-text">Сайт салоны красоты. Для мужчин, да.</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
 
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-aplus.jpg" alt="A Plus" width="360" height="576"> 
-                </div>
+                <a class="card-product-item" href="#">
+                    <div>
+                        <img src="img/img-mishka.jpg" alt="MISHKA" width="360" height="576"> 
+                    </div>
 
-                <div class="description">   
-                    <div class="description-title">A Plus</div>
-                    <div class="description-text">Лендинг курсов повышения квалификации</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
-        
-            <a class="card-product-item" href="#">
-                <div>
-                    <img src="img/img-kvast.jpg" alt="КВАСТ" width="360" height="576"> 
-                </div>
+                    <div class="description">   
+                        <div class="description-title">MISHKA</div>
+                        <div class="description-text">Интернет-магазин  вязаных игрушек</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
 
-                <div class="description">   
-                    <div class="description-title">КВАСТ</div>
-                    <div class="description-text">Промо-сайт производителя крафтового кваса</div>
-                    <div class="description-btn">9 900 руб.</div>
-                </div>
-            </a>
+                <a class="card-product-item" href="#">
+                    <div>
+                        <img src="img/img-aplus.jpg" alt="A Plus" width="360" height="576"> 
+                    </div>
+
+                    <div class="description">   
+                        <div class="description-title">A Plus</div>
+                        <div class="description-text">Лендинг курсов повышения квалификации</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
+            
+                <a class="card-product-item" href="#">
+                    <div>
+                        <img src="img/img-kvast.jpg" alt="КВАСТ" width="360" height="576"> 
+                    </div>
+
+                    <div class="description">   
+                        <div class="description-title">КВАСТ</div>
+                        <div class="description-text">Промо-сайт производителя крафтового кваса</div>
+                        <div class="btn description-btn">9 900 руб.</div>
+                    </div>
+                </a>
+            </div>
+
+            <ul class="page-navigation">
+                <li class="page-navigation-active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a class="page-navigation-next" href="#">Следующая</a></li> 
+            </ul>
         </div>
-
-        <ul class="page-navigation">
-            <li><a class="page-navigation-item" href="#">1</a></li>
-            <li><a class="page-navigation-item" href="#">2</a></li>
-            <li><a class="page-navigation-item" href="#">3</a></li>
-            <li><a class="page-navigation-item" href="#">Следующая</a></li>   
-        </ul>
     </main>
 
     <div class="map">
@@ -204,18 +209,17 @@
         </div>
     </footer>
 
-    <!-- модальное окно с формой отправки сообщения 
     <div class="write-us">
         <form class="write-us-form" action="#" method="POST">
             <h1>Напишите нам</h1>
-            <div class="write-us-form-tip clearfix">
+            <div class="write-us-form clearfix">
 
-                <div class="write-us-form-field">
+                <div class="write-us-left-column">
                     <label for="field-name">Ваше имя:</label>
-                    <input type="text" name="name" id="field-name" placeholder="Представьтесь, пожалуйста" required>
+                    <input type="text" name="login" id="field-name" placeholder="Представьтесь, пожалуйста" required>
                 </div>
                     
-                <div class="write-us-form-field">
+                <div class="write-us-right-column">
                     <label for="field-email">Ваш e-mail:</label>
                     <input type="email" name="email" id="field-email" placeholder="Для отправки ответа" required>
                 </div>
@@ -228,15 +232,15 @@
                 
             <div class="write-us-form-btn clearfix">
                 <div class="write-us-form-field">
-                    <button class="btn" type="submit">Отправить</button>
+                    <button class="btn write-us-btn" type="submit">Отправить</button>
                 </div>
                 
                 <div class="write-us-form-field">
-                    <a class="cancel-btn" href="#">Отмена</a>
+                    <a class="cancel-btn" href="#"></a>
                 </div>
-            </div> 
+            </div>
         </form> 
-    </div> -->
-
+    </div> 
+    <script src="js/script.js"></script>
     </body>
 </html>
