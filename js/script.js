@@ -1,13 +1,17 @@
-var open = document.querySelector(".btn-write-us");
-var show = document.querySelector(".write-us");
-var cancel = show.querySelector(".cancel-btn");
-var login = show.querySelector("[name=login]");
-var form = show.querySelector("form");
+//Обратная связь
+var link = document.querySelector(".btn-feedback");
+var popup = document.querySelector(".feedback");
+var form = document.querySelector(".feedback-form");
+var close = popup.querySelector(".feedback-circle-btn");
+var cancel = popup.querySelector(".feedback-cancel");
+var login = popup.querySelector("[name=login]");
+var email = popup.querySelector("[name=email]");
+var text = popup.querySelector("[name=text]");
 var storage = localStorage.getItem("login");
 
-open.addEventListener("click", function (event) {
+link.addEventListener("click", function (event) {
     event.preventDefault(event);
-    show.classList.add("write-us-show");
+    popup.classList.add("feedback-show");
     login.focus();
     if (storage) {
         login.value = storage;
@@ -18,17 +22,50 @@ open.addEventListener("click", function (event) {
 
 close.addEventListener("click", function (event) {
     event.preventDefault(event);
-    show.classList.remove("write-us-show");
-});
-
-form.addEventListener("submit", function (event) {
-    localStorage.setItem("login", login.value);
+    popup.classList.remove("feedback-show");
+    popup.classList.remove("feedback-error");
 });
 
 window.addEventListener("keydown", function (event) {
-    if (event.keyCode == 27) {
-        if (show.classList.contains("write-us-show")) {
-            show.classList.remove("write-us-show");
+    if (event.keyCode === 27) {
+        if (popup.classList.contains("feedback-show")) {
+            popup.classList.remove("feedback-show");
+            popup.classList.remove("feedback-error");
         }
     }
 });
+
+form.addEventListener("submit", function(event) {
+  if (!login.value || !email.value || !text.value) {
+    event.preventDefault();
+    popup.classList.remove("feedback-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("feedback-error");
+  } else {
+    localStorage.setItem("login", login.value);
+  }
+});
+
+//Онлайн-Карта Google
+function initialize() {
+    var x = 59.939095;
+    var y = 30.322954;
+    var mapOptions = {
+        zoom: 18,
+        center: new google.maps.LatLng(x, y),
+        scrollwheel: false,
+        disableDefaultUI: true
+    }
+    var map = new  google.maps.Map(
+        document.querySelector(".map"),
+        mapOptions
+    );
+    var image = "img/map-marker.png";
+    var myLatLng = new google.maps.LatLng(x, y);
+    var beachMarker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image
+    });
+}
+google.maps.event.addDomListener(window, "load", initialize);
