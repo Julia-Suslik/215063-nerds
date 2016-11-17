@@ -54,24 +54,32 @@
 
                         <div class="grid">
                             <h3>Сетка:</h3>
-                            <label class="catalog-label"><input type="radio" value="radio" name="switch" checked><span></span>Адаптивная</label>
+                            <input type="radio" id="adaptive" value="radio" name="switch" checked>
+                            <label for="adaptive">Адаптивная</label>
 
-                            <label class="catalog-label"><input type="radio" value="radio" name="switch""><span></span>Фиксированная</label>
+                            <input type="radio" id="fixed" value="radio" name="switch"">
+                            <label for="fixed">Фиксированная</label>
 
-                            <label class="catalog-label"><input type="radio" value="radio" name="switch"><span></span>Резиновая</label>
+                            <input type="radio" id="fluid" value="radio" name="switch">
+                            <label id="fluid">Резиновая</label>
                         </div>
 
                         <div class="features">
                             <h3 class="search-options-title search-options-features-title">Особенности:</h3>
-                            <label class="catalog-label"><input type="checkbox" value="feature1" checked><span></span>Слайдер</label>
+                            <input type="checkbox" id="slider" value="feature1" checked>
+                            <label for="slider">Слайдер</label>
                             
-                            <label class="catalog-label"><input type="checkbox" value="feature2"><span></span>Блок преимуществ</label>
+                            <input type="checkbox" id="advantages-block" value="feature2">
+                            <label for="advantages-block">Блок преимуществ</label>
                             
-                            <label class="catalog-label"><input type="checkbox" value="feature3" checked><span></span>Новости</label>
+                            <input type="checkbox" id="news" value="feature3" checked>
+                            <label for="news">Новости</label>
                             
-                            <label class="catalog-label"><input type="checkbox" value="feature4"><span></span>Галерея</label>
+                            <input type="checkbox" id="gallery" value="feature4">
+                            <label for="gallery">Галерея</label>
                             
-                            <label class="catalog-label"><input type="checkbox" value="feature5"><span></span>Корзина</label>
+                            <input type="checkbox" id="cart" value="feature5">
+                            <label for="cart">Корзина</label>
                         </div>
                             
                         <input class="filters-btn" type="submit" value="Показать">
@@ -106,7 +114,7 @@
                         <div class="description">
                             <h2>Sedona</h2>
                             <p>Информационный сайт для туристов</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
 
@@ -121,7 +129,7 @@
                         <div class="description">
                             <h2>Pink App</h2>
                             <p>Продуктовый лендинг приложения для iOS и Android</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
 
@@ -134,9 +142,9 @@
                         
                         <img src="img/img-barbershop.jpg" width="360" height="576" alt="Сайт салоны красоты">
                         <div class="description">
-                            <h2>>Barbershop</h2>
+                            <h2>Barbershop</h2>
                             <p>Сайт салоны красоты. Для мужчин, да</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
 
@@ -151,7 +159,7 @@
                         <div class="description">
                             <h2>Mishka</h2>
                             <p>Интернет-магазин вязаных игрушек</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
 
@@ -166,7 +174,7 @@
                         <div class="description">
                             <h2>A Plus</h2>
                             <p>Лендинг курсов повышения квалификации</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
 
@@ -181,7 +189,7 @@
                         <div class="description">
                             <h2>Кваст</h2>
                             <p>Промо-сайт производителя крафтового кваса</p>
-                            <a class="btn btn-red" href="#" title="Цена">9 900 руб.</a>
+                            <a class="btn btn-redd" href="#" title="Цена">9 900 руб.</a>
                         </div>
                     </div>
                 </div>
@@ -209,17 +217,17 @@
     </div>
 
     <footer class="main-footer">     
-        <div class="container clearfix">      
+        <div class="container">      
            <div class="social-networks">
-                <div class="social-networks-left-column">
-                    <a class="social-btn social-btn-vk" href="#"</a>
-                    <a class="social-btn social-btn-fb" href="#"></a>
-                    <a class="social-btn social-btn-inst" href="#"></a>
+                <div class="social-networks-icon">
+                    <a class="social-vk" href="https://vk.com/">Вконтакте</a>
+                    <a class="social-fb" href="https://facebook.com/">Facebook</a>
+                    <a class="social-insta" href="https://instagram.com/">Instagram</a>
                 </div>
 
-                <div class="social-networks-right-column">
-                    <p class="social-networks-header">Давайте дружить, это выгодно!</p>
-                    <p class="sale">Скидка 10% для друзей из социальных сетей.</p>
+                <div class="social-networks-text">
+                    <b>Давайте дружить, это выгодно!</b>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
                 </div>    
             </div>   
         </div>
@@ -246,10 +254,10 @@
             <textarea name="text" id="feedback-textarea" placeholder="В свободной форме" rows="5"></textarea>
             
             <div class="feedback-block">
-                <button type="submit" class="btn feedback-btn">Отправить</button>
+                <button type="submit" class="btn">Отправить</button>
             </div>
             
-            <a href="#" class="feedback-circle-btn"></a>
+            <button class="close" type="button" title="Закрыть">Закрыть</button>
         </form>
     </div>
 

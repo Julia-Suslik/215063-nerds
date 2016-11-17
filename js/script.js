@@ -2,7 +2,7 @@
 var link = document.querySelector(".btn-feedback");
 var popup = document.querySelector(".feedback");
 var form = document.querySelector(".feedback-form");
-var close = popup.querySelector(".feedback-circle-btn");
+var close = popup.querySelector(".close");
 var cancel = popup.querySelector(".feedback-cancel");
 var login = popup.querySelector("[name=login]");
 var email = popup.querySelector("[name=email]");
@@ -36,15 +36,35 @@ window.addEventListener("keydown", function (event) {
 });
 
 form.addEventListener("submit", function(event) {
-  if (!login.value || !email.value || !text.value) {
-    event.preventDefault();
-    popup.classList.remove("feedback-error");
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("feedback-error");
-  } else {
-    localStorage.setItem("login", login.value);
-  }
-});
+    if (!login.value || !email.value || !text.value) {
+        event.preventDefault();
+        if (!login.value) {
+            event.preventDefault();
+            login.classList.add("input-error");
+            if (login.addEventListener("focus", function(event) {
+                event.preventDefault();
+                login.classList.remove("input-error");
+            })) {
+            }
+        } if (!email.value) {
+            event.preventDefault();
+            email.classList.add("input-error");
+            if (email.addEventListener("focus", function(event) {
+                event.preventDefault();
+                email.classList.remove("input-error");
+            })) {
+            }
+        } if (!text.value) {
+            event.preventDefault();
+            text.classList.add("input-error");
+            if (text.addEventListener("focus", function(event) {
+                event.preventDefault();
+                text.classList.remove("input-error");
+            })) {
+            }
+        }   
+    }
+})
 
 //Онлайн-Карта Google
 function initialize() {
