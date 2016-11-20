@@ -12,25 +12,17 @@ var storage = localStorage.getItem("login");
 link.addEventListener("click", function (event) {
     event.preventDefault(event);
     popup.classList.add("feedback-show");
-    login.focus();
-    if (storage) {
-        login.value = storage;
-    } else {
-        login.focus();
-    }
 });
 
 close.addEventListener("click", function (event) {
     event.preventDefault(event);
     popup.classList.remove("feedback-show");
-    popup.classList.remove("feedback-error");
 });
 
 window.addEventListener("keydown", function (event) {
     if (event.keyCode === 27) {
         if (popup.classList.contains("feedback-show")) {
             popup.classList.remove("feedback-show");
-            popup.classList.remove("feedback-error");
         }
     }
 });
@@ -67,25 +59,22 @@ form.addEventListener("submit", function(event) {
 })
 
 //Онлайн-Карта Google
+
+/*
 function initialize() {
-    var x = 59.939095;
-    var y = 30.322954;
-    var mapOptions = {
-        zoom: 18,
-        center: new google.maps.LatLng(x, y),
-        scrollwheel: false,
-        disableDefaultUI: true
-    }
-    var map = new  google.maps.Map(
-        document.querySelector(".map"),
-        mapOptions
-    );
-    var image = "img/map-marker.png";
-    var myLatLng = new google.maps.LatLng(x, y);
-    var beachMarker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        icon: image
-    });
-}
-google.maps.event.addDomListener(window, "load", initialize);
+  var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(59.938929, 30.323115)
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+  var image = "img/map-marker.png";
+  var myLatLng = new google.maps.LatLng(59.938929, 30.323115);
+  var beachMarker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: image
+  });
+
+  google.maps.event.addDomListener(window, "load", initialize);
+  */
