@@ -59,8 +59,6 @@ form.addEventListener("submit", function(event) {
 })
 
 //Онлайн-Карта Google
-
-/*
 function initialize() {
   var mapOptions = {
     zoom: 15,
@@ -75,6 +73,6 @@ function initialize() {
     map: map,
     icon: image
   });
+}
+google.maps.event.addDomListener(window, "load", initialize);
 
-  google.maps.event.addDomListener(window, "load", initialize);
-  */
